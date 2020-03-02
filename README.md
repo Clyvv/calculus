@@ -30,7 +30,7 @@ The service is deployed to heroku.  Use the following url to access the the api.
   ```
   
 ## Deployment
-The service is deployed to heroku cloud.  To deploy to heroku using github follow these steps:
+The service is deployed to heroku cloud.  To deploy to heroku using Git follow these steps:
 ```sh
 $ git init
 $ git add .
