@@ -14,24 +14,23 @@ import com.example.calculus.dto.CalculusSuccessResponse;
 import com.example.calculus.service.CalculusService;
 
 
-
 @RestController
 @RequestMapping("/api/v1/calculus")
 public class CalculusController {
-	
-	@Autowired
-	private CalculusService calculusService;
-	
-	@GetMapping
+
+    @Autowired
+    private CalculusService calculusService;
+
+    @GetMapping
     public ResponseEntity<?> get(@RequestParam(name = "query") String query) throws UnsupportedEncodingException {
 
-		try {
-			Double result = calculusService.calculate(query);
-			return ResponseEntity.ok().body(new CalculusSuccessResponse(false, result));
-		}catch (Exception ex){
-			return ResponseEntity.unprocessableEntity().body(new CalculusErrorResponse(true, ex.getMessage()));
-	}
-		
+        try {
+            Double result = calculusService.calculate(query);
+            return ResponseEntity.ok().body(new CalculusSuccessResponse(false, result));
+        } catch (Exception ex) {
+            return ResponseEntity.unprocessableEntity().body(new CalculusErrorResponse(true, ex.getMessage()));
+        }
+
     }
 
 }
