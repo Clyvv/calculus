@@ -36,7 +36,7 @@ $ git init
 $ git add .
 $ git commit -m "initial commit"
 ```
-Now you need push the code to the Heroku-hosted remote.
+Now you need push the code to the Heroku-hosted remote.  Make sure you are logged in before running the following commands.
 ```sh
 $ heroku create
 $ git push heroku master
